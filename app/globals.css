@@ -3,6 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Uganda Safari Company Design Tokens */
+  --color-primary: #2A8F63;      /* Emerald Green */
+  --color-secondary: #F58220;    /* Sunset Orange */
+  --color-neutral: #F7F6F2;      /* Off-White */
+  --color-text: #2C241F;         /* Espresso */
+  --color-accent-1: #D4A017;     /* Gold */
+  --color-accent-2: #4FB7D9;     /* Sky Blue */
 }
 
 @theme inline {
