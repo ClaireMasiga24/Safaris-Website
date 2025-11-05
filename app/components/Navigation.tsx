@@ -34,16 +34,7 @@ export default function Navigation() {
       { name: 'Kibale Forest', href: '/lodges/kibale-forest' }
     ] },
     { name: 'Stories', hasDropdown: false, href: '/stories' },
-    { name: 'About Us', hasDropdown: true, submenu: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Why Travel with Us', href: '/about/why-travel-with-us' },
-      { name: 'Customer Reviews', href: '/about/customer-reviews' },
-      { name: 'Responsible Travel', href: '/about/responsible-travel' },
-      { name: 'Triping Guidelines', href: '/about/trip-guidelines' },
-      { name: 'Terms & Conditions', href: '/about/terms-conditions' },
-      { name: 'Privacy Policy', href: '/about/privacy-policy' },
-      { name: 'Contact Us', href: '/about/contact' }
-    ] }
+    { name: 'About Us', hasDropdown: false, href: '/about' }
   ];
 
   return (
@@ -58,7 +49,7 @@ export default function Navigation() {
                 <svg className="w-4 h-4" fill="#2C241F" viewBox="0 0 24 24">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
-                <a href="mailto:info@ugandasafari.com" className="hover:text-[#2A8F63] transition-colors">Email: info@ugandasafari.com</a>
+                <a href="mailto:bigapesafrica@gmail.com" className="hover:text-[#2A8F63] transition-colors">Email:bigapesafrica@gmail.com</a>
               </div>
             </div>
           </div>
@@ -90,12 +81,13 @@ export default function Navigation() {
           <div className="flex items-center">
             <img 
               src="/images/logo.png" 
-              alt="Uganda Safaris" 
+              alt="Uganda Safari Company" 
               className="h-12 w-16 object-cover rounded"
             />
             <div className="ml-3 flex flex-col">
               <span className="text-xl font-bold leading-tight">Uganda</span>
-              <span className="text-lg font-semibold leading-tight">Safaris</span>
+              <span className="text-lg font-semibold leading-tight">Safari</span>
+              <span className="text-sm font-medium leading-tight">Company</span>
             </div>
           </div>
 

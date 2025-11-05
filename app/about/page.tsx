@@ -7,13 +7,29 @@ export default function About() {
       <Navigation />
       
       <main className="pt-20">
-        <section className="bg-[#2A8F63] text-white py-16">
-          <div className="max-w-7xl mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
-            <p className="text-xl text-[#F7F6F2] max-w-3xl">
-              Discover the story behind Uganda's premier safari company. 
-              We're passionate about creating unforgettable wildlife experiences in the Pearl of Africa.
-            </p>
+        {/* Hero Section */}
+        <section className="w-full">
+          <div className="flex flex-col lg:flex-row min-h-[70vh]">
+            {/* Left Column - Black Background */}
+            <div className="bg-black text-white lg:w-[55%] p-8 lg:p-16 flex items-center">
+              <div className="max-w-2xl">
+                <h1 className="text-5xl lg:text-7xl font-serif font-bold mb-6 leading-tight">
+                  Visit Uganda
+                </h1>
+                <p className="text-lg lg:text-xl font-sans leading-relaxed opacity-90">
+                  We are a Safari Company with operations in Uganda and Rwanda handling Destination management for Tour operators around the world and private or group tailor made life impacting African experiences.
+                </p>
+              </div>
+            </div>
+            
+            {/* Right Column - Image */}
+            <div className="lg:w-[45%]">
+              <img 
+                src="/images/reasons-blade-1.jpeg" 
+                alt="Person sitting in safari chair overlooking green landscape"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </section>
 
