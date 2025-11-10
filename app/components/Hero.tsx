@@ -21,9 +21,13 @@ export default function Hero() {
           <p className="text-xl md:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto">
             Offering Eco-friendly, Mid-range to High-end, Luxury Gorilla Trekking Adventures and Wildlife Safaris in Uganda
           </p>
-          <button className="bg-[#D4A017] hover:bg-[#F58220] text-[#2C241F] font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 transform hover:scale-105">
-            REQUEST A QUOTE
-          </button>
+        </div>
+      </div>
+
+      {/* Countries Overlay - Bottom Center */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 text-white">
+        <div className="text-lg md:text-xl font-serif font-light tracking-wide text-center">
+          UGANDA | RWANDA | TANZANIA | ZANZIBAR
         </div>
       </div>
 
