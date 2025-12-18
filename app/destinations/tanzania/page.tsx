@@ -1,79 +1,79 @@
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-export default function UgandaGorillasPrimates() {
+export default function TanzaniaSafaris() {
   // Sample pricing cards data - 9 cards for 3x3 grid
   const pricingCards = [
     {
       id: 1,
-      title: "Gorilla Trekking Adventure",
+      title: "Serengeti Migration Safari",
       badge: "Popular",
-      price: "$1,850",
-      description: "3-day gorilla trekking experience in Bwindi Impenetrable Forest",
-      image: "/images/big-apes-africa-2.jpg"
-    },
-    {
-      id: 2,
-      title: "Chimpanzee Safari",
-      badge: "Wildlife",
-      price: "$1,200",
-      description: "2-day chimpanzee tracking in Kibale Forest National Park",
+      price: "$3,200",
+      description: "5-day safari following the Great Migration in Serengeti National Park",
       image: "/images/big5_safari.jpg"
     },
     {
-      id: 3,
-      title: "Big Five Safari",
-      badge: "Classic",
+      id: 2,
+      title: "Ngorongoro Crater Adventure",
+      badge: "Wildlife",
       price: "$2,500",
-      description: "4-day classic safari in Queen Elizabeth National Park",
+      description: "3-day safari exploring the world's largest intact volcanic caldera",
       image: "/images/wildlife-viewing-1.jpg"
     },
     {
-      id: 4,
-      title: "Golden Monkey Trek",
-      badge: "Unique",
-      price: "$950",
-      description: "1-day golden monkey trekking in Mgahinga Gorilla Park",
+      id: 3,
+      title: "Kilimanjaro Climbing Safari",
+      badge: "Adventure",
+      price: "$4,800",
+      description: "7-day Mount Kilimanjaro climb combined with wildlife safari",
       image: "/images/visit-rwanda-1.jpeg"
     },
     {
+      id: 4,
+      title: "Tarangire Elephant Safari",
+      badge: "Unique",
+      price: "$1,800",
+      description: "3-day safari focusing on Tarangire's massive elephant herds",
+      image: "/images/big-apes-africa-2.jpg"
+    },
+    {
       id: 5,
-      title: "Luxury Safari Lodge",
+      title: "Luxury Northern Circuit",
       badge: "Premium",
-      price: "$3,200",
-      description: "5-day luxury safari with premium accommodation",
+      price: "$5,500",
+      description: "8-day luxury safari covering Serengeti, Ngorongoro, and Manyara",
       image: "/images/apoka-safari-lodge-1.jpg"
     },
     {
       id: 6,
-      title: "Cultural Immersion",
+      title: "Cultural Maasai Experience",
       badge: "Cultural",
-      price: "$1,100",
-      description: "3-day cultural experience with local communities",
+      price: "$1,400",
+      description: "3-day cultural immersion with Maasai communities",
       image: "/images/WhatsApp-Image-2023-06-22-at-11.12.32.jpeg"
     },
     {
       id: 7,
-      title: "Family Safari",
+      title: "Family Safari Adventure",
       badge: "Family",
-      price: "$2,800",
-      description: "4-day family-friendly safari experience",
+      price: "$3,800",
+      description: "6-day family-friendly safari with educational activities",
       image: "/images/visit-uganda-1.jpeg"
     },
     {
       id: 8,
-      title: "Adventure Combo",
+      title: "Southern Circuit Explorer",
       badge: "Adventure",
-      price: "$2,100",
-      description: "5-day adventure with rafting and wildlife",
+      price: "$2,900",
+      description: "5-day safari exploring Selous and Ruaha National Parks",
       image: "/images/rafting-jinja-uganda.jpg"
     },
     {
       id: 9,
-      title: "Budget Safari",
+      title: "Budget Safari Experience",
       badge: "Budget",
-      price: "$850",
-      description: "3-day affordable safari experience",
+      price: "$1,200",
+      description: "4-day affordable safari in Lake Manyara and Tarangire",
       image: "/images/user-experience.webp"
     }
   ];
@@ -82,24 +82,24 @@ export default function UgandaGorillasPrimates() {
   const topDestinations = [
     {
       id: 1,
-      title: "Bwindi Impenetrable Forest",
-      description: "Bwindi Impenetrable National Park is an ancient rainforest located in southwestern Uganda. Gorillas (over 1,000), rare birds and butterflies are found thriving in the park's dense vegetation. The park is a UNESCO world heritage site and home to approximately half of the world's population of endangered mountain gorillas.",
+      title: "Serengeti National Park",
+      description: "Serengeti National Park is Tanzania's oldest and most popular national park, famous for its annual migration of over 1.5 million wildebeest and 250,000 zebra. The park covers 14,750 square kilometers of grassland plains, savanna, riverine forest, and woodlands, hosting the Big Five and over 500 bird species.",
       image: "/images/bwindi-landscape.jpg.webp",
-      link: "Explore Bwindi Forest"
+      link: "Explore Serengeti"
     },
     {
       id: 2,
-      title: "Kibale National Park",
-      description: "Kibale Forest National Park is home to 13 primate species, including the largest population of chimpanzees in Uganda. The 795 sq km park has two distinct forest ecosystems: lowland rainforest and evergreen forest. The park provides opportunities to track wild chimpanzees and other primates while exploring its diverse habitats.",
+      title: "Ngorongoro Conservation Area",
+      description: "The Ngorongoro Conservation Area is a UNESCO World Heritage Site featuring the world's largest intact volcanic caldera. The crater floor is home to approximately 25,000 large animals including lions, elephants, rhinos, and large herds of wildebeest and zebras, making it one of Africa's most spectacular wildlife viewing destinations.",
       image: "/images/kibale-chimps001341.jpg.webp",
-      link: "Explore Kibale"
+      link: "Explore Ngorongoro"
     },
     {
       id: 3,
-      title: "Queen Elizabeth National Park",
-      description: "Queen Elizabeth National Park, named after the British monarch, is Uganda's most popular park, with diverse ecosystems ranging from savanna to wetlands and forests. Located in the western region and spanning 1,978 square kilometers, the park is noted for its tree climbing lions and large herds of elephants along with over 600 bird species.",
+      title: "Mount Kilimanjaro",
+      description: "Mount Kilimanjaro is Africa's highest peak at 5,895 meters and the world's highest free-standing mountain. Located in Kilimanjaro National Park, it offers several climbing routes through five distinct ecological zones. The mountain is a dormant volcano with three volcanic cones and attracts thousands of climbers annually.",
       image: "/images/queen-elizabeth-np-uganda.jpg.webp",
-      link: "Explore Queen Elizabeth"
+      link: "Explore Kilimanjaro"
     }
   ];
 
@@ -107,24 +107,24 @@ export default function UgandaGorillasPrimates() {
   const additionalPlaces = [
     {
       id: 1,
-      title: "Lake Mburo",
-      description: "Lake Mburo National Park is the smallest and most accessible of Uganda's ten national parks. It's an ideal stop on a safari circuit from Kampala or Entebbe. The park's diverse habitats support zebras, impalas, elands, and over 350 bird species making it great for birdwatching.",
-      image: "/images/lake-mburo.jpg",
-      link: "Explore Lake Mburo"
+      title: "Lake Manyara National Park",
+      description: "Lake Manyara National Park is known for its tree-climbing lions, large elephant herds, and flamingos. The park's groundwater forest, acacia woodland, and alkaline lake create diverse habitats supporting over 400 bird species. It's an excellent first stop on the northern safari circuit.",
+      image: "/images/lake-mburo-horseback-safaris.jpg.webp",
+      link: "Explore Lake Manyara"
     },
     {
       id: 2,
-      title: "Murchison Falls",
-      description: "Murchison Falls National Park is named for the dramatic falls where the Nile forces its way through a 7-meter gap. It's Uganda's largest national park covering 3,840 sq km. The park is home to 76 mammal species and 451 bird species, making it a premier safari destination.",
-      image: "/images/murchison-falls.jpg",
-      link: "Explore Murchison Falls"
+      title: "Tarangire National Park",
+      description: "Tarangire National Park is famous for its massive elephant herds, ancient baobab trees, and diverse wildlife. During the dry season, the Tarangire River attracts thousands of animals, making it one of the best places for wildlife viewing outside the Serengeti ecosystem.",
+      image: "/images/murchison-falls.jpg.webp",
+      link: "Explore Tarangire"
     },
     {
       id: 3,
-      title: "Kampala",
-      description: "Kampala is Uganda's vibrant capital city built on seven hills. It offers a mix of modern city life and traditional culture, with bustling markets, historical sites, and a thriving nightlife. The city serves as a gateway to Uganda's national parks and safari destinations.",
-      image: "/images/kampala.jpg",
-      link: "Explore Kampala"
+      title: "Arusha National Park",
+      description: "Arusha National Park offers diverse landscapes including Mount Meru, Ngurdoto Crater, and Momella Lakes. The park is known for its walking safaris, canoeing, and excellent birdwatching opportunities. It's an ideal introduction to Tanzania's northern safari circuit.",
+      image: "/images/kampala-city-culture_1-500x333.webp",
+      link: "Explore Arusha"
     }
   ];
 
@@ -143,10 +143,10 @@ export default function UgandaGorillasPrimates() {
           <div className="relative z-10 h-full flex items-center justify-center text-center">
             <div className="max-w-4xl mx-auto px-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Uganda Wildlife Safari Tours & Packages
+                Tanzania Wildlife Safari Tours & Packages
               </h1>
               <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-                Culture-infused, eco-friendly, sustainable, and regenerative mid-range to luxury Uganda wildlife safaris for nature adventurers
+                Experience the ultimate African safari adventure with the Great Migration, Big Five, and Mount Kilimanjaro in Tanzania's legendary national parks
               </p>
               <button className="bg-[#2A8F63] text-white px-8 py-4 rounded-lg hover:bg-[#1E6B4A] transition-colors font-semibold text-lg">
                 Safari Packages
@@ -159,10 +159,10 @@ export default function UgandaGorillasPrimates() {
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-[#2C241F] mb-6">
-              Tailor-made Uganda Wildlife Safaris
+              Tailor-made Tanzania Wildlife Safaris
             </h2>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              If you love nature, wild animals, trekking primates, being in the wilderness, in remote lodges off the grid, Uganda's wildlife safari holidays and tours are just for you. Uganda offers you a combination of all: real, up-close encounters with Africa's iconic animals on safari. To help you plan your trip, here's our list of top eco-friendly and sustainable Uganda wildlife tours.
+              Tanzania offers some of Africa's most spectacular wildlife experiences, from the Great Migration in Serengeti to the Ngorongoro Crater's wildlife spectacle. Our Tanzania safaris combine luxury accommodations with authentic wildlife encounters, cultural experiences, and breathtaking landscapes. Whether you're seeking the Big Five, climbing Kilimanjaro, or exploring remote wilderness areas, we create personalized journeys that exceed expectations.
             </p>
           </div>
         </section>
@@ -214,7 +214,7 @@ export default function UgandaGorillasPrimates() {
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-[#2C241F] mb-12">
-              You can trust these Uganda safari experts
+              You can trust these Tanzania safari experts
             </h2>
             
             {/* Team Photos */}
@@ -247,7 +247,7 @@ export default function UgandaGorillasPrimates() {
 
             {/* Description Text */}
             <p className="text-lg text-gray-700 italic mb-8 leading-relaxed max-w-3xl mx-auto">
-              We are Uganda wildlife safari specialists who will work closely with you to design a personalized journey that provides an exceptional experience. Traveling to unfamiliar places and dealing with complex logistics can be overwhelming, but with us, it doesn't have to.
+              We are Tanzania wildlife safari specialists with deep knowledge of the northern and southern circuits. Our team works closely with you to design personalized journeys that provide exceptional wildlife encounters, cultural immersion, and unforgettable memories in Tanzania's most spectacular landscapes.
             </p>
 
             {/* Red Button */}
@@ -255,20 +255,20 @@ export default function UgandaGorillasPrimates() {
               LETS HELP YOU PLAN
             </button>
 
-            {/* Uganda Safari Planning Guide */}
+            {/* Tanzania Safari Planning Guide */}
             <div className="mt-16 text-left">
               <h3 className="text-2xl md:text-3xl font-bold text-[#2C241F] mb-6">
-                Uganda Safari Planning Guide
+                Tanzania Safari Planning Guide
               </h3>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  Uganda wildlife safaris feature some of the most unique eco-adventures in Africa, offering more private encounters than celebrated African safari destinations like Kenya and Tanzania. This less-known East African destination promises immersive adventures, discovery, and unforgettable memories with its unique blend of rare wildlife encounters, incredible scenery, cultures, and sustainable experiences.
+                  Tanzania wildlife safaris offer some of Africa's most iconic experiences, from witnessing the Great Migration in Serengeti to exploring the Ngorongoro Crater's wildlife-rich floor. This East African destination promises spectacular wildlife viewing, breathtaking landscapes, and authentic cultural encounters across its diverse ecosystems.
                 </p>
                 <p>
-                  Uganda is a paradise for nature travelers, a land of diverse and intriguing ecosystems. From lush rainforests to expansive savannah plains and shimmering lakes, the variety is bound to excite you. Within these unique ecosystems, rare safari encounters include icons like the endangered mountain gorillas, chimpanzees, tree-climbing lions, an incredible list of endemic birds and more not commonly seen in other destinations. Top destinations to include on your safari itinerary include Bwindi Impenetrable National Park, particularly famous for its gorilla trekking experiences; Queen Elizabeth National Park for its classic game drives and tranquil boat cruises along the Kazinga Channel; and Kibale Forest National Park for the once-in-a-lifetime chimpanzee trekking experience.
+                  Tanzania is a premier safari destination with world-renowned national parks and conservation areas. The northern circuit features the Serengeti's endless plains, Ngorongoro's volcanic caldera, and Mount Kilimanjaro's snow-capped peak. The southern circuit offers more remote wilderness experiences in Selous and Ruaha, while the western circuit provides chimpanzee trekking in Mahale Mountains and Gombe Stream National Parks.
                 </p>
                 <p>
-                  Uganda, being a young destination, planning a Uganda safari holiday requires careful preparation. But with the proper guidance, you can fully enjoy its incredible list of eco-friendly experiences. In this guide, we provide a list of top-rated luxury Uganda safari tours and packages to help you confidently plan your adventure. Our safaris in Uganda feature luxury camps overlooking vast plains and eco-friendly lodges tucked away in rainforests, catering to every traveler's preferences.
+                  Planning a Tanzania safari requires understanding seasonal patterns, migration routes, and regional variations. Our expert team helps you navigate these complexities to create the perfect itinerary that matches your interests, budget, and travel style. From luxury tented camps to budget-friendly options, we ensure your Tanzanian adventure exceeds expectations.
                 </p>
               </div>
             </div>
@@ -283,7 +283,7 @@ export default function UgandaGorillasPrimates() {
                       GOOD FOR
                     </h4>
                     <p className="text-gray-600">
-                      Primate trekking & wildlife safaris
+                      Great Migration & Big Five safaris
                     </p>
                   </div>
 
@@ -293,7 +293,7 @@ export default function UgandaGorillasPrimates() {
                       BEST TIME
                     </h4>
                     <p className="text-gray-600">
-                      Jun - Aug
+                      Jun - Oct
                     </p>
                   </div>
 
@@ -303,7 +303,7 @@ export default function UgandaGorillasPrimates() {
                       BEST WAY
                     </h4>
                     <p className="text-gray-600">
-                      Planned tour package
+                      Northern circuit safari
                     </p>
                   </div>
                 </div>
@@ -312,42 +312,42 @@ export default function UgandaGorillasPrimates() {
           </div>
         </section>
 
-        {/* Two-Column Layout: Uganda Safari Highlights & Map */}
+        {/* Two-Column Layout: Tanzania Safari Highlights & Map */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Left Column - Uganda Safari Highlights */}
+              {/* Left Column - Tanzania Safari Highlights */}
               <div className="bg-black text-white p-8 rounded-2xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-8">Uganda Safari Highlights</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-8">Tanzania Safari Highlights</h2>
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-bold text-[#2A8F63] mb-2">Top gorilla encounters:</h3>
+                    <h3 className="text-xl font-bold text-[#2A8F63] mb-2">Great Migration spectacle:</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Trek into the mountains and come face-to-face with the mountain gorillas in the impenetrable tropical jungles and on the slopes of the Virunga mountains.
+                      Witness one of nature's greatest shows as millions of wildebeest and zebras cross the Serengeti plains in their annual migration cycle.
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-[#2A8F63] mb-2">Best primates experiences:</h3>
+                    <h3 className="text-xl font-bold text-[#2A8F63] mb-2">Ngorongoro Crater wildlife:</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Awkwardly follow a wild troop of chimpanzees and spend unforgettable moments observing them in their natural habitat on a chimpanzee trekking adventure.
+                      Descend into the world's largest volcanic caldera to observe dense concentrations of wildlife including the Big Five in a natural amphitheater.
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-[#2A8F63] mb-2">Excellent water safaris:</h3>
+                    <h3 className="text-xl font-bold text-[#2A8F63] mb-2">Mount Kilimanjaro climbs:</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Cruise the Kazinga Channel or Victoria Nile and get close to elephants, hippos, buffalo, and big game.
+                      Conquer Africa's highest peak with various climbing routes offering different challenges and spectacular views across multiple ecological zones.
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-[#2A8F63] mb-2">Uncrowded safari drives:</h3>
+                    <h3 className="text-xl font-bold text-[#2A8F63] mb-2">Big Five encounters:</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Morning or evening game drives with an expert local guide to find the Big Five, tree climbing lions, and other exciting animals in the savannah parks.
+                      Excellent opportunities to spot lions, leopards, elephants, buffalo, and rhinos across multiple national parks and conservation areas.
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-[#2A8F63] mb-2">Top-notch birding spots:</h3>
+                    <h3 className="text-xl font-bold text-[#2A8F63] mb-2">Cultural Maasai experiences:</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      More than 1000 colorful bird species found within the most accessible national parks and forests.
+                      Authentic cultural interactions with Maasai communities, learning about their traditional lifestyle, customs, and connection to the land.
                     </p>
                   </div>
                 </div>
@@ -359,7 +359,7 @@ export default function UgandaGorillasPrimates() {
                   <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-gray-600 text-2xl">🗺️</span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Uganda Safari Map</h3>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">Tanzania Safari Map</h3>
                   <p className="text-gray-600">Interactive map showing all major safari destinations</p>
                 </div>
               </div>
@@ -371,7 +371,7 @@ export default function UgandaGorillasPrimates() {
         <section className="py-16 bg-[#FBF6EF]">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-[#2C241F] text-center mb-12">
-              Top Uganda Safari Destinations
+              Top Tanzania Safari Destinations
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {topDestinations.map((destination) => (
@@ -403,7 +403,7 @@ export default function UgandaGorillasPrimates() {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-[#2C241F] text-center mb-12">
-              More Amazing Places in Uganda
+              More Amazing Places in Tanzania
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {additionalPlaces.map((place) => (
