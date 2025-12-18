@@ -3,7 +3,7 @@ export default function Overview() {
     <section className="bg-white py-12">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
-          Overview
+          Safari To East Africa
         </h2>
         <div className="prose prose-lg max-w-none text-gray-700">
           <p className="text-lg mb-6">

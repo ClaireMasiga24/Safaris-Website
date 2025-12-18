@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   const [showAllPackages, setShowAllPackages] = useState(false);
+  const [showMoreGorilla, setShowMoreGorilla] = useState(false);
 
   const safariPackages = [
     {
@@ -56,7 +57,7 @@ export default function Home() {
     },
   ];
 
-  const displayedPackages = showAllPackages ? safariPackages : safariPackages.slice(0, 3);
+  const displayedPackages = showAllPackages ? safariPackages : safariPackages.slice(0, 6);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -84,51 +85,148 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4">
             <div className="mb-8 text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Overview
+                Safari To East Africa
               </h2>
             </div>
 
             <div className="space-y-6 text-center">
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">We Are Big Apes Africa</h3>
+              <hr className="my-4 border-gray-900 border-2 w-64 mx-auto" />
               <p className="text-lg text-gray-700 leading-relaxed">
-                <strong>Uganda Safari Company</strong> is a leading eco-luxury tour operator crafting tailor-made gorilla trekking adventures and authentic wildlife safaris across Uganda and Rwanda, with seamless extensions into Kenya and Tanzania.
+                We are dedicated to providing personalized and sustainable safari experiences that allow you to fully immerse yourself in the natural and cultural wonders of Africa. From the breathtaking beauty of mountain gorillas and chimpanzees to the thrill of spotting the Big 5 game animals, our expert local guides will help you discover the unique sights and lifestyles of communities.
               </p>
-              
-              <div id="overview-more" className="space-y-6 hidden">
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Our journeys go beyond travel — they create lasting memories, genuine connections, and a positive impact on both people and nature. Each experience is meticulously designed to immerse you in the raw beauty and authentic culture of East Africa.
-                </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Led by expert local guides, each safari blends comfort with purpose, featuring carefully chosen eco-lodges and opportunities to support conservation and community initiatives. We believe in responsible tourism that enriches both travelers and local communities.
-                </p>
-                <p className="text-lg text-gray-700 leading-relaxed font-semibold italic">
-                  With Uganda Safari Company, you don't just visit Uganda — you experience it.
-                </p>
+              <div className="mt-6">
+                <img 
+                  src="/images/big-apes-africa-2.jpg" 
+                  alt="Big Apes Africa - Uganda Safari Company" 
+                  className="mx-auto rounded-lg shadow-lg max-w-full h-auto max-h-96 object-cover"
+                />
               </div>
-
-              <div>
-                <button 
-                  onClick={(e) => {
-                    const moreContent = document.getElementById('overview-more');
-                    const btn = e.currentTarget;
-                    if (moreContent?.classList.contains('hidden')) {
-                      moreContent.classList.remove('hidden');
-                      btn.innerHTML = 'Show Less <svg class="w-5 h-5 ml-1 inline transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>';
-                    } else {
-                      moreContent?.classList.add('hidden');
-                      btn.innerHTML = 'Read More <svg class="w-5 h-5 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>';
-                    }
-                  }}
-                  className="text-[#D4A017] hover:text-[#F58220] font-semibold text-base transition-colors"
+              <h4 className="text-xl font-bold text-gray-800 mt-4">
+                Booking Gorilla Safaris & Wildlife across East Africa
+              </h4>
+           
+              {/* Gorilla Booking Expandable Content - INSIDE THE SAME SECTION */}
+              <div className="space-y-6 text-center mt-6">
+                {/* Always visible paragraphs */}
+                <p className="text-lg text-gray-900 leading-relaxed">
+                  There's nothing quite like sharing a few long moments with a mountain gorilla family: the first glimpse of black as a juvenile jumps off a nearby branch, a toddler clings to its mother's back and a giant silverback rises to size you up. To make the most of this life-changing experience, planning ahead is essential.
+                </p>
+                
+                <p className="text-lg text-gray-400 leading-relaxed">
+                  Any time you can. The experience will be incredible no matter when you go, but there are advantages to going at different times of the year.
+                </p>
+                
+                {/* Expandable content */}
+                <div 
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                    showMoreGorilla ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                  }`}
                 >
-                  Read More
-                  <svg className="w-5 h-5 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
+                  <div className="space-y-6 pt-2">
+                    <p className="text-lg text-gray-900 leading-relaxed">
+                      It's generally easier to track gorillas in the rainy seasons (March to May and September to November) because they hang out at lower altitudes. You may also get better photos in the rainy season, assuming it isn't raining at the time you're with the gorillas, because they love to sunbathe after getting wet. Then again, you'll need to be wearing some serious wet-weather gear.
+                    </p>
+                    
+                    <p className="text-lg text-gray-900 leading-relaxed">
+                      The busiest times on the mountains are December to February and July to August. Scoring permits takes more effort during these months, but that won't matter if a tour company is handling things for you.
+                    </p>
+                    
+                    <p className="text-lg text-gray-900 leading-relaxed">
+                      Permits are required to visit the gorillas and booking ahead is always a good idea, particularly if you're planning to visit Uganda's Bwindi Impenetrable National Park and Rwanda's Volcanoes National Park from December to February or July to August. If you aren't travelling in these months and you only have a very small window of opportunity, you should still make a reservation as far in advance as possible to be safe.
+                    </p>
+                    
+                    <p className="text-lg text-gray-900 leading-relaxed">
+                      To make a phone booking for Rwanda, you need to pay a deposit by bank transfer, while in Uganda you'll need to provide all the money up front. If you can't get a gorilla permit on your own, you'll need to go through a tour operator, which is often a good idea anyway. In the Democratic Republic of the Congo (DRC), you can book online.
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Show more/less button */}
+                <div className="pt-6">
+                  <button
+                    onClick={() => setShowMoreGorilla(!showMoreGorilla)}
+                    className="bg-[#C8975F] hover:bg-[#B38650] text-white font-semibold py-3 px-10 rounded-md transition-all duration-300 shadow-md"
+                    aria-label={showMoreGorilla ? "Show less content" : "Show more content"}
+                  >
+                    {showMoreGorilla ? "Show less" : "Show more"}
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </section>
+
+        {/* Best Seller Tours */}
+<section className="bg-white py-14">
+  <div className="max-w-6xl mx-auto px-4">
+    
+    {/* Heading */}
+    <div className="text-center mb-12">
+      <h2 className="text-4xl md:text-5xl font-serif text-[#8B5A2B] mb-2">
+        Best Seller <span className="relative inline-block">Tours</span>
+      </h2>
+    </div>
+
+    {/* Two-column list */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-0">
+
+      {/* LEFT COLUMN */}
+      <div className="space-y-6">
+        {[
+          { title: "17 Days Uganda Wildlife-Culture Safari", badge: "Popular Tour of the Year" },
+          { title: "10 Days Best Of Uganda Safari", badge: "Top Choice for Travelers!" },
+          { title: "12 Days Best Of Uganda Safari", badge: "Bestselling Adventures" },
+          { title: "2 Days Kigali City Tour & Gorillas Rwanda", badge: "New" },
+          { title: "6 Days Gorilla & Wildlife Tour in Rwanda", badge: "Top Rated" },
+        ].map((item, i) => (
+          <div key={i} className="border-b border-gray-200 pb-4">
+            <div className="flex items-start gap-3">
+              <span className="mt-1 text-green-700">✔</span>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-[17px] text-[#000000]">
+                  {item.title}
+                </span>
+                <span className="text-xs bg-sky-400 text-white px-2 py-[2px] rounded">
+                  {item.badge}
+                </span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* RIGHT COLUMN */}
+      <div className="space-y-6">
+        {[
+          { title: "10 Days Gorillas, Chimps & Big 5 Wildlife Safari", badge: "Traveler’s Choice" },
+          { title: "25 Days Uganda Safari" },
+          { title: "18 Days Uganda Safari", badge: "Must Go" },
+          { title: "7 Days Rwanda And Uganda Gorilla Safari" },
+          { title: "4 Days Uganda Double Gorilla Trekking.", badge: "Best Seller" },
+        ].map((item, i) => (
+          <div key={i} className="border-b border-gray-200 pb-4">
+            <div className="flex items-start gap-3">
+              <span className="mt-1 text-green-700">✔</span>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-[17px] text-gray-800">
+                  {item.title}
+                </span>
+                {item.badge && (
+                  <span className="text-xs bg-sky-400 text-white px-2 py-[2px] rounded">
+                    {item.badge}
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
         {/* Popular Activities */}
         <section className="bg-gray-50 py-12 md:py-16">
@@ -190,118 +288,66 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-gray-50 py-12">
+
+        <section className="bg-white py-12">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                Book your safari in 4 simple steps.
+                Tour Packages
               </h2>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                Because you're not just anyone, you can explore your uniqueness by tailoring your Africa safari dream with an expert local safari consultant in four simple steps.
+              <p className="text-lg text-gray-700 max-w-4xl mx-auto">
+                Discover our curated selection of safari packages tailored to different interests and budgets.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  step: "Step 1",
-                  title: "Chat with Expert",
-                  description: "Connect with our local safari consultant to discuss your dream safari",
-                  image: "/images/chat_icon (1).png",
-                },
-                {
-                  step: "Step 2",
-                  title: "Tailor Your Journey",
-                  description: "Customize every detail of your safari to match your preferences and style",
-                  image: "/images/jigsaw.webp",
-                },
-                {
-                  step: "Step 3",
-                  title: "Plan & Prepare",
-                  description: "Get expert guidance on preparations and what to expect on your adventure",
-                  image: "/images/meditation.webp",
-                },
-                {
-                  step: "Step 4",
-                  title: "Experience Safari",
-                  description: "Embark on your unforgettable African safari adventure",
-                  image: "/images/user-experience.webp",
-                },
-              ].map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="mb-4 h-48 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {displayedPackages.map((pkg) => (
+                <div key={pkg.id} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+                  <div className="h-48 bg-gray-200 flex items-center justify-center">
                     <img 
-                      src={step.image} 
-                      alt={`${step.title} - Uganda Safari Company`} 
-                      className="w-32 h-32 object-contain" 
+                      src="/images/map.webp" 
+                      alt={`${pkg.title} - Uganda Safari Company`} 
+                      className="w-full h-full object-cover" 
                     />
                   </div>
-                  <div className="text-sm font-semibold text-[#D4A017] mb-2">{step.step}</div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{step.title}</h3>
-                  <p className="text-gray-600 text-sm">{step.description}</p>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">{pkg.title}</h3>
+                    <p className="text-gray-600">{pkg.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
             <div className="text-center mt-12">
-              <a 
-                href="/about/contact"
-                className="bg-[#D4A017] hover:bg-[#F58220] text-[#2C241F] font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 transform hover:scale-105 inline-block"
-                aria-label="Contact Uganda Safari Company to start your safari"
+              <button 
+                onClick={() => setShowAllPackages(!showAllPackages)} 
+                className="flex items-center justify-center gap-2 mx-auto text-[#D4A017] hover:text-[#F58220] font-semibold text-lg transition-colors duration-300"
+                aria-label={showAllPackages ? "Show fewer safari packages" : "Show more safari packages"}
               >
-                Take your first trip
+                {showAllPackages ? (
+                  <>
+                    Show less
+                    <svg className="w-5 h-5 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </>
+                ) : (
+                  <>
+                    Show more packages
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </>
+                )}
+              </button>
+            </div>
+            <div className="text-center mt-8">
+              <a 
+                href="/tours/safari-types"
+                className="bg-[#D4A017] hover:bg-[#F58220] text-[#2C241F] font-bold py-3 px-6 rounded-lg text-base transition-colors duration-300 transform hover:scale-105 inline-block"
+                aria-label="Explore our complete safari collection"
+              >
+                EXPLORE OUR SAFARI COLLECTION
               </a>
             </div>
-          </div>
-        </section>
-
-        <section className="bg-white py-12">
-          <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {displayedPackages.map((pkg) => (
-              <div key={pkg.id} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
-                <div className="h-48 bg-gray-200 flex items-center justify-center">
-                  <img 
-                    src="/images/map.webp" 
-                    alt={`${pkg.title} - Uganda Safari Company`} 
-                    className="w-full h-full object-cover" 
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{pkg.title}</h3>
-                  <p className="text-gray-600">{pkg.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <button 
-              onClick={() => setShowAllPackages(!showAllPackages)} 
-              className="flex items-center justify-center gap-2 mx-auto text-[#D4A017] hover:text-[#F58220] font-semibold text-lg transition-colors duration-300"
-              aria-label={showAllPackages ? "Show fewer safari packages" : "Show more safari packages"}
-            >
-              {showAllPackages ? (
-                <>
-                  Show less
-                  <svg className="w-5 h-5 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </>
-              ) : (
-                <>
-                  Show more packages
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </>
-              )}
-            </button>
-          </div>
-          <div className="text-center mt-8">
-            <a 
-              href="/tours/safari-types"
-              className="bg-[#D4A017] hover:bg-[#F58220] text-[#2C241F] font-bold py-3 px-6 rounded-lg text-base transition-colors duration-300 transform hover:scale-105 inline-block"
-              aria-label="Explore our complete safari collection"
-            >
-              EXPLORE OUR SAFARI COLLECTION
-            </a>
           </div>
         </section>
 
@@ -410,6 +456,69 @@ export default function Home() {
           >
             Find out which type of safari suites you !
           </a>
+        </section>
+
+        <section className="bg-gray-50 py-12">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                Book your safari in 4 simple steps.
+              </h2>
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                Because you're not just anyone, you can explore your uniqueness by tailoring your Africa safari dream with an expert local safari consultant in four simple steps.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  step: "Step 1",
+                  title: "Chat with Expert",
+                  description: "Connect with our local safari consultant to discuss your dream safari",
+                  image: "/images/chat_icon (1).png",
+                },
+                {
+                  step: "Step 2",
+                  title: "Tailor Your Journey",
+                  description: "Customize every detail of your safari to match your preferences and style",
+                  image: "/images/jigsaw.webp",
+                },
+                {
+                  step: "Step 3",
+                  title: "Plan & Prepare",
+                  description: "Get expert guidance on preparations and what to expect on your adventure",
+                  image: "/images/meditation.webp",
+                },
+                {
+                  step: "Step 4",
+                  title: "Experience Safari",
+                  description: "Embark on your unforgettable African safari adventure",
+                  image: "/images/user-experience.webp",
+                },
+              ].map((step, index) => (
+                <div key={index} className="text-center">
+                  <div className="mb-4 h-48 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+                    <img 
+                      src={step.image} 
+                      alt={`${step.title} - Uganda Safari Company`} 
+                      className="w-32 h-32 object-contain" 
+                    />
+                  </div>
+                  <div className="text-sm font-semibold text-[#D4A017] mb-2">{step.step}</div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">{step.title}</h3>
+                  <p className="text-gray-600 text-sm">{step.description}</p>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-12">
+              <a 
+                href="/about/contact"
+                className="bg-[#D4A017] hover:bg-[#F58220] text-[#2C241F] font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 transform hover:scale-105 inline-block"
+                aria-label="Contact Uganda Safari Company to start your safari"
+              >
+                Take your first trip
+              </a>
+            </div>
+          </div>
         </section>
 
         <Footer />
