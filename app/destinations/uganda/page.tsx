@@ -1,82 +1,11 @@
+"use client";
+
+import Link from 'next/link';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
+import { featuredTours } from '../../data/featuredTours';
 
 export default function UgandaGorillasPrimates() {
-  // Sample pricing cards data - 9 cards for 3x3 grid
-  const pricingCards = [
-    {
-      id: 1,
-      title: "Gorilla Trekking Adventure",
-      badge: "Popular",
-      price: "$1,850",
-      description: "3-day gorilla trekking experience in Bwindi Impenetrable Forest",
-      image: "/images/big-apes-africa-2.jpg"
-    },
-    {
-      id: 2,
-      title: "Chimpanzee Safari",
-      badge: "Wildlife",
-      price: "$1,200",
-      description: "2-day chimpanzee tracking in Kibale Forest National Park",
-      image: "/images/big5_safari.jpg"
-    },
-    {
-      id: 3,
-      title: "Big Five Safari",
-      badge: "Classic",
-      price: "$2,500",
-      description: "4-day classic safari in Queen Elizabeth National Park",
-      image: "/images/wildlife-viewing-1.jpg"
-    },
-    {
-      id: 4,
-      title: "Golden Monkey Trek",
-      badge: "Unique",
-      price: "$950",
-      description: "1-day golden monkey trekking in Mgahinga Gorilla Park",
-      image: "/images/visit-rwanda-1.jpeg"
-    },
-    {
-      id: 5,
-      title: "Luxury Safari Lodge",
-      badge: "Premium",
-      price: "$3,200",
-      description: "5-day luxury safari with premium accommodation",
-      image: "/images/apoka-safari-lodge-1.jpg"
-    },
-    {
-      id: 6,
-      title: "Cultural Immersion",
-      badge: "Cultural",
-      price: "$1,100",
-      description: "3-day cultural experience with local communities",
-      image: "/images/WhatsApp-Image-2023-06-22-at-11.12.32.jpeg"
-    },
-    {
-      id: 7,
-      title: "Family Safari",
-      badge: "Family",
-      price: "$2,800",
-      description: "4-day family-friendly safari experience",
-      image: "/images/visit-uganda-1.jpeg"
-    },
-    {
-      id: 8,
-      title: "Adventure Combo",
-      badge: "Adventure",
-      price: "$2,100",
-      description: "5-day adventure with rafting and wildlife",
-      image: "/images/rafting-jinja-uganda.jpg"
-    },
-    {
-      id: 9,
-      title: "Budget Safari",
-      badge: "Budget",
-      price: "$850",
-      description: "3-day affordable safari experience",
-      image: "/images/user-experience.webp"
-    }
-  ];
 
   // Top destinations data
   const topDestinations = [
@@ -128,81 +57,254 @@ export default function UgandaGorillasPrimates() {
     }
   ];
 
+  // National parks data for carousel
+  const nationalParks = [
+    {
+      name: "Rwenzori Mountain National Park",
+      image: "/images/visit-uganda-1.jpeg"
+    },
+    {
+      name: "Murchison Falls National Park",
+      image: "/images/murchison-falls.jpg.webp"
+    },
+    {
+      name: "Lake Mburo National Park",
+      image: "/images/lake-mburo-horseback-safaris.jpg.webp"
+    },
+    {
+      name: "Kibale National Park",
+      image: "/images/kibale-chimps001341.jpg.webp"
+    },
+    {
+      name: "Bwindi Impenetrable Park",
+      image: "/images/bwindi-landscape.jpg.webp"
+    },
+    {
+      name: "Queen Elizabeth National Park",
+      image: "/images/queen-elizabeth-np-uganda.jpg.webp"
+    }
+  ];
+
+
   return (
     <div className="min-h-screen">
       <Navigation />
       
-      <main className="pt-20">
-        {/* Hero Section with Image and Text Overlay */}
-        <section className="relative h-96 md:h-[500px] bg-gray-900">
+      <main className="">
+        {/* Hero Section with Image and Text Overlay - Full screen like homepage */}
+        <section className="relative h-screen w-full">
           <div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/images/WhatsApp-Image-2023-06-22-at-11.13.03-1.jpeg')" }}
           />
-          <div className="absolute inset-0 bg-black/40"></div>
-          <div className="relative z-10 h-full flex items-center justify-center text-center">
-            <div className="max-w-4xl mx-auto px-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Uganda Wildlife Safari Tours & Packages
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/70 to-emerald-800/50 z-10"></div>
+          <div className="relative z-20 flex items-end justify-center h-full px-4 pb-12 md:pb-20">
+            <div className="max-w-4xl mx-auto text-center text-white">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight font-['Garamond']">
+                Uganda Safaris
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-                Culture-infused, eco-friendly, sustainable, and regenerative mid-range to luxury Uganda wildlife safaris for nature adventurers
-              </p>
-              <button className="bg-[#2A8F63] text-white px-8 py-4 rounded-lg hover:bg-[#1E6B4A] transition-colors font-semibold text-lg">
-                Safari Packages
-              </button>
             </div>
           </div>
         </section>
 
-        {/* Introduction Section */}
+        {/* Introduction Section - Split Screen */}
         <section className="py-16 bg-white">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2C241F] mb-6">
-              Tailor-made Uganda Wildlife Safaris
-            </h2>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              If you love nature, wild animals, trekking primates, being in the wilderness, in remote lodges off the grid, Uganda's wildlife safari holidays and tours are just for you. Uganda offers you a combination of all: real, up-close encounters with Africa's iconic animals on safari. To help you plan your trip, here's our list of top eco-friendly and sustainable Uganda wildlife tours.
-            </p>
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#2C241F] mb-6">
+                Gorilla Trekking & Wildlife Safaris
+              </h2>
+              <h3 className="text-xl md:text-2xl text-gray-600 mb-6">About Uganda</h3>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div className="space-y-6">
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Uganda’s biggest draw is the opportunity to track the mountain gorillas in Bwindi Impenetrable National Park. It is one of the only three countries where these gentle giants live and has over half of the world’s only remaining population of mountain gorillas. The focus on the Apes does not do justice to the breadth of Uganda’s appeal.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Kidepo and Queen Elizabeth National parks are the perfect gift any Nature lover would need. They are small and heavily populated and arguably the most bio diverse destinations in Africa. Murchison Falls National park does not stop at having the world’s most powerful waterfalls, it is the largest National park bisected by the mighty river Nile with a high population of safari favorites perhaps the most exciting. Thanks to the Location of Uganda on a plateau, its two different biome; the equatorial rainforests of West Africa and the tropical savannahs of East Africa. This is what makes Uganda Africa combined.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  For more primate action and superb bird watching, the dense jungles of Kibale forest and Semliki National Parks definitely deliver. While the former has the highest population of Chimpanzees in Africa, numbering over 1,000 the latter is blessed with 23 Albertine Rift endemics. Spotting a Shoebill stork here would be a massive tick on any birdwatchers list.
+                </p>
+              </div>
+              <div className="space-y-6">
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  You can explore one of the three highest mountains in Africa; Rwenzori, track the white rhinos on foot, or get close to some of the most sought birds during boat cruises. Some of these activities are ground-breaking in that they are achieved through a conservancy system, whereby local communities neighbouring parks take a decisive role in environmental and cultural conservation.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  If you have a soft spot for cultural experiences, you cannot leave Uganda without spending time with the Karimajong, the sister tribe of Kenya’s Masai or the Batwa pygmies, the first people of the forest.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  A stay at Lake Bunyonyi, Africa’s most beautiful lake lake hemmed in by several mountain ranges, is a nice safari add-on for relaxation, swimming and sunset boat rides.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Pricing Cards Section */}
-        <section className="py-16 bg-[#FBF6EF]">
+        {/* Uganda National Parks - Horizontal Scroll */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#2C241F] text-center mb-12">
+              Uganda National Parks
+            </h2>
+            <div className="flex flex-nowrap overflow-x-auto gap-6 pb-4">
+              {nationalParks.map((park, index) => (
+                <div
+                  key={index}
+                  className="relative h-[450px] w-[300px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group"
+                >
+                  {/* Background Image */}
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                    style={{ backgroundImage: `url(${park.image})` }}
+                  />
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  {/* Park Name */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 className="text-2xl font-bold">{park.name}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Popular Activities in Uganda */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="text-center">
+              <div className="text-sm uppercase tracking-widest text-[#B89A6D] mb-2">
+                Experiences
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2C241F] font-['Garamond'] mb-6">
+                Popular Activities in Uganda
+              </h2>
+              <div className="w-24 h-px bg-[#D4B483] mx-auto mb-12"></div>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+              {[
+                { 
+                  name: "Gorilla Trekking", 
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
+                    </svg>
+                  )
+                },
+                { 
+                  name: "Community Tour", 
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                    </svg>
+                  )
+                },
+                { 
+                  name: "Boat Trips", 
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1.096M4.5 21V9.75m0 0 3.75-1.364M4.5 9.75 2.25 7.5m15 6 3.75 1.364M19.5 9.75l3.75 1.364" />
+                    </svg>
+                  )
+                },
+                { 
+                  name: "Game Drives", 
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+                    </svg>
+                  )
+                },
+                { 
+                  name: "Nature Walks", 
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                    </svg>
+                  )
+                },
+                { 
+                  name: "Fishing", 
+                  icon: (
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                  )
+                },
+              ].map((activity, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center text-center"
+                >
+                  <div className="w-16 h-16 flex items-center justify-center rounded-full border-2 border-[#D4B483] mb-4 text-[#B89A6D]">
+                    {activity.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#2C241F]">
+                    {activity.name}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Uganda Safaris Title */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#2C241F] font-['Garamond']">
+              Uganda Safaris
+            </h2>
+            <div className="w-24 h-px bg-[#D4B483] mx-auto mt-6"></div>
+          </div>
+        </section>
+
+        {/* Featured Safari Packages - Static Grid */}
+        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-[#2C241F] text-center mb-12">
               Featured Safari Packages
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {pricingCards.map((card) => (
-                <div key={card.id} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-[#D4B483]/20 hover:shadow-xl transition-all duration-300">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {featuredTours.map((tour) => (
+                <div key={tour.id} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
                   {/* Card Image with Badge */}
                   <div className="relative h-48 overflow-hidden">
                     <div 
                       className="w-full h-full bg-cover bg-center"
-                      style={{ backgroundImage: `url(${card.image})` }}
+                      style={{ backgroundImage: `url(${tour.image})` }}
                     />
                     <div className="absolute top-4 left-4">
-                      <span className="bg-[#2A8F63] text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        {card.badge}
+                      <span className="bg-[#8B4513] text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        {tour.badge}
                       </span>
                     </div>
                   </div>
 
                   {/* Card Content */}
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-[#2C241F] mb-2">
-                      {card.title}
+                  <div className="p-5">
+                    <h3 className="text-lg font-bold text-[#2C241F] mb-2 line-clamp-2">
+                      {tour.title}
                     </h3>
-                    <div className="text-2xl font-bold text-[#2A8F63] mb-3">
-                      {card.price}
+                    {/* Star Rating */}
+                    <div className="flex items-center mb-3">
+                      <div className="flex text-yellow-500">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+                      <span className="ml-1 text-sm text-gray-600">({tour.rating}.0)</span>
                     </div>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                      {card.description}
-                    </p>
-                    <button className="w-full bg-[#2A8F63] text-white py-3 rounded-lg hover:bg-[#1E6B4A] transition-colors font-semibold">
-                      Book Now
-                    </button>
+                    <Link href={`/tours/${tour.slug}`} className="block w-full bg-[#8B4513] text-white py-2.5 rounded-lg hover:bg-[#6B3410] transition-colors font-semibold text-sm text-center">
+                      READ MORE
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -216,222 +318,9 @@ export default function UgandaGorillasPrimates() {
             <h2 className="text-3xl md:text-4xl font-bold text-[#2C241F] mb-12">
               You can trust these Uganda safari experts
             </h2>
-            
-            {/* Team Photos */}
-            <div className="flex justify-center gap-12 mb-12">
-              <div className="text-center">
-                <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 overflow-hidden">
-                  <div 
-                    className="w-full h-full bg-cover bg-center"
-                    style={{ backgroundImage: "url('/images/visit-rwanda-1.jpeg')" }}
-                  />
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 overflow-hidden">
-                  <div 
-                    className="w-full h-full bg-cover bg-center"
-                    style={{ backgroundImage: "url('/images/visit-uganda-1.jpeg')" }}
-                  />
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 overflow-hidden">
-                  <div 
-                    className="w-full h-full bg-cover bg-center"
-                    style={{ backgroundImage: "url('/images/WhatsApp-Image-2023-06-22-at-11.13.03-1.jpeg')" }}
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Description Text */}
-            <p className="text-lg text-gray-700 italic mb-8 leading-relaxed max-w-3xl mx-auto">
-              We are Uganda wildlife safari specialists who will work closely with you to design a personalized journey that provides an exceptional experience. Traveling to unfamiliar places and dealing with complex logistics can be overwhelming, but with us, it doesn't have to.
-            </p>
-
-            {/* Red Button */}
-            <button className="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors font-semibold text-lg">
-              LETS HELP YOU PLAN
-            </button>
-
-            {/* Uganda Safari Planning Guide */}
-            <div className="mt-16 text-left">
-              <h3 className="text-2xl md:text-3xl font-bold text-[#2C241F] mb-6">
-                Uganda Safari Planning Guide
-              </h3>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
-                <p>
-                  Uganda wildlife safaris feature some of the most unique eco-adventures in Africa, offering more private encounters than celebrated African safari destinations like Kenya and Tanzania. This less-known East African destination promises immersive adventures, discovery, and unforgettable memories with its unique blend of rare wildlife encounters, incredible scenery, cultures, and sustainable experiences.
-                </p>
-                <p>
-                  Uganda is a paradise for nature travelers, a land of diverse and intriguing ecosystems. From lush rainforests to expansive savannah plains and shimmering lakes, the variety is bound to excite you. Within these unique ecosystems, rare safari encounters include icons like the endangered mountain gorillas, chimpanzees, tree-climbing lions, an incredible list of endemic birds and more not commonly seen in other destinations. Top destinations to include on your safari itinerary include Bwindi Impenetrable National Park, particularly famous for its gorilla trekking experiences; Queen Elizabeth National Park for its classic game drives and tranquil boat cruises along the Kazinga Channel; and Kibale Forest National Park for the once-in-a-lifetime chimpanzee trekking experience.
-                </p>
-                <p>
-                  Uganda, being a young destination, planning a Uganda safari holiday requires careful preparation. But with the proper guidance, you can fully enjoy its incredible list of eco-friendly experiences. In this guide, we provide a list of top-rated luxury Uganda safari tours and packages to help you confidently plan your adventure. Our safaris in Uganda feature luxury camps overlooking vast plains and eco-friendly lodges tucked away in rainforests, catering to every traveler's preferences.
-                </p>
-              </div>
-            </div>
-
-            {/* Three-Column Information Section */}
-            <div className="mt-16">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200">
-                <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
-                  {/* Column 1 - GOOD FOR */}
-                  <div className="p-8 text-center">
-                    <h4 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">
-                      GOOD FOR
-                    </h4>
-                    <p className="text-gray-600">
-                      Primate trekking & wildlife safaris
-                    </p>
-                  </div>
-
-                  {/* Column 2 - BEST TIME */}
-                  <div className="p-8 text-center">
-                    <h4 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">
-                      BEST TIME
-                    </h4>
-                    <p className="text-gray-600">
-                      Jun - Aug
-                    </p>
-                  </div>
-
-                  {/* Column 3 - BEST WAY */}
-                  <div className="p-8 text-center">
-                    <h4 className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-2">
-                      BEST WAY
-                    </h4>
-                    <p className="text-gray-600">
-                      Planned tour package
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Two-Column Layout: Uganda Safari Highlights & Map */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Left Column - Uganda Safari Highlights */}
-              <div className="bg-black text-white p-8 rounded-2xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-8">Uganda Safari Highlights</h2>
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-xl font-bold text-[#2A8F63] mb-2">Top gorilla encounters:</h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Trek into the mountains and come face-to-face with the mountain gorillas in the impenetrable tropical jungles and on the slopes of the Virunga mountains.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-[#2A8F63] mb-2">Best primates experiences:</h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Awkwardly follow a wild troop of chimpanzees and spend unforgettable moments observing them in their natural habitat on a chimpanzee trekking adventure.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-[#2A8F63] mb-2">Excellent water safaris:</h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Cruise the Kazinga Channel or Victoria Nile and get close to elephants, hippos, buffalo, and big game.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-[#2A8F63] mb-2">Uncrowded safari drives:</h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      Morning or evening game drives with an expert local guide to find the Big Five, tree climbing lions, and other exciting animals in the savannah parks.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-[#2A8F63] mb-2">Top-notch birding spots:</h3>
-                    <p className="text-gray-300 leading-relaxed">
-                      More than 1000 colorful bird species found within the most accessible national parks and forests.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Column - Map Placeholder */}
-              <div className="bg-gray-100 rounded-2xl p-8 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-gray-600 text-2xl">🗺️</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Uganda Safari Map</h3>
-                  <p className="text-gray-600">Interactive map showing all major safari destinations</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Top Destinations Section */}
-        <section className="py-16 bg-[#FBF6EF]">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2C241F] text-center mb-12">
-              Top Uganda Safari Destinations
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {topDestinations.map((destination) => (
-                <div key={destination.id} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-[#D4B483]/20 hover:shadow-xl transition-all duration-300">
-                  <div className="relative h-48 overflow-hidden">
-                    <div 
-                      className="w-full h-full bg-cover bg-center"
-                      style={{ backgroundImage: `url(${destination.image})` }}
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-[#2C241F] mb-3">
-                      {destination.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                      {destination.description}
-                    </p>
-                    <button className="text-[#2A8F63] font-semibold hover:text-[#1E6B4A] transition-colors">
-                      {destination.link} →
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Additional Places Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2C241F] text-center mb-12">
-              More Amazing Places in Uganda
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {additionalPlaces.map((place) => (
-                <div key={place.id} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-[#D4B483]/20 hover:shadow-xl transition-all duration-300">
-                  <div className="relative h-48 overflow-hidden">
-                    <div 
-                      className="w-full h-full bg-cover bg-center"
-                      style={{ backgroundImage: `url(${place.image})` }}
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-[#2C241F] mb-3">
-                      {place.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                      {place.description}
-                    </p>
-                    <button className="text-[#2A8F63] font-semibold hover:text-[#1E6B4A] transition-colors">
-                      {place.link} →
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
