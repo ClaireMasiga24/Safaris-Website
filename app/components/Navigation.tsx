@@ -70,11 +70,29 @@ export default function Navigation() {
       { name: 'Zanzibar', href: '/destinations/zanzibar' }
     ] },
     { name: 'Lodges', hasDropdown: true, submenu: [
-      { name: 'Entebbe', href: '/lodges/entebbe' },
-      { name: 'Lake Mburo NP', href: '/lodges/lake-mburo' },
-      { name: 'Bwindi National Park', href: '/lodges/bwindi' },
-      { name: 'Queen Elizabeth National Park', href: '/lodges/queen-elizabeth' },
-      { name: 'Kibale Forest', href: '/lodges/kibale-forest' }
+      { 
+        name: 'Uganda', 
+        hasDropdown: true, 
+        href: '/destinations/uganda', 
+        submenu: [
+          { name: 'Entebbe', href: '/lodges/entebbe' },
+          { name: 'Murchison Falls', href: '/lodges/murchison-falls' },
+          { name: 'Bwindi National Park', href: '/lodges/bwindi' },
+          { name: 'Kibale Forest', href: '/lodges/kibale-forest' }
+        ] 
+      },
+      { 
+        name: 'Rwanda', 
+        hasDropdown: true, 
+        href: '/destinations/rwanda-gorillas', 
+        submenu: [
+          { name: 'Volcanoes National Park', href: '/destinations/volcanoes-national-park' },
+          { name: 'Akagera National Park', href: '/destinations/akagera-national-park' },
+          { name: 'Ngungwe Forest', href: '/destinations/nyungwe-forest' }
+        ] 
+      },
+      { name: 'Zanzibar', href: '/destinations/zanzibar' },
+      { name: 'Tanzania', href: '/destinations/tanzania-safaris' }
     ] },
     { name: 'Stories', hasDropdown: false, href: '/stories' },
     { name: 'About Us', hasDropdown: false, href: '/about' }
